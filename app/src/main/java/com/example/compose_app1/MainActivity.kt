@@ -30,14 +30,17 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+//in composable we create functions which change state so as to achieve desired
+// output. Instead of setcontentview we have setcontent and instead of textview we
+//have text in compose. we dont create variables in this case since we use states.
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
             text = "Hello $name!",
             modifier = modifier
                 .background(Color.Red)
-                .padding(16.dp),
+                .padding(16.dp)
+                .background(Color.Cyan),
         color = Color.Blue,
         fontSize = 30.sp
     )
